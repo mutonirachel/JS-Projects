@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Sidebar Menu -->
+    
+    <div class="menu-btn" onclick="openMenu()">&#9776; Open Menu</div>
+
+    <div class="menu-container" id="menuContainer">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <script>
+        function openMenu() {
+            document.getElementById("menuContainer").style.width = "250px";
+            document.querySelector('.page-content').style.marginLeft = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("menuContainer").style.width = "0";
+            document.querySelector('.page-content').style.marginLeft = "0";
+        }
+    </script>
+
+</body>
+</html>

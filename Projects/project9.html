@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="slider-body">
+
+    <!-- Slider -->
+
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide"><img src="/Images/fish-lemons.png" alt="My Image" class="fish"></div>
+            <div class="slide"><img src="/Images/food.jpg" alt="My Image"></div>
+            <div class="slide"><img src="/Images/Fresh-Fruit.jpg" alt="My Image"></div>
+            <div class="slide"><img src="/Images/Juice Drink.jpeg" alt="My Image" class="juice"></div>
+            <div class="slide"><img src="/Images/" alt="My Image"></div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <script>
+        var currentSlide = 0;
+
+        function changeSlide(n) {
+            showSlide(currentSlide += n);
+        }
+
+        function showSlide(n) {
+            var slides = document.querySelector('.slides');
+            var totalSlides = document.querySelectorAll('.slide').length;
+
+            if (n >= totalSlides) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = n;
+            }
+
+            var translateValue = -currentSlide * 100 + '%';
+            slides.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        
+        setInterval(function() {
+            changeSlide(1);
+        }, 3000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Dropdown -->
+    
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("myDropdown");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

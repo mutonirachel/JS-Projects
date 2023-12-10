@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Popup on button click -->
+    <div class="popup-btn">
+
+    <button onclick="openPopup()" class="clickbtn">CLick here to start</button>
+</div>
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-content">
+            <h2>Do you have an account?</h2>
+            <p>If Yes, then click close button below.</p>
+            <button onclick="closePopup()" class="close">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "flex";
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

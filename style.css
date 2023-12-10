@@ -1,0 +1,415 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aliceblue;
+    height: 100vh;
+}
+
+/* navbar styles */
+
+.nav{
+    background-color: #232323;
+    overflow: hidden;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(78, 110, 171);
+  }
+
+
+
+  /* contact form styles */
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    grid-gap: 20px;
+}
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 5px 50px;
+    border: none;
+    border-bottom: 2px solid ;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: rgb(97, 97, 212);
+    color: #fff;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #f1c8c8;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Login Page Styles */
+
+.containers {
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f4e9e9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid; 
+    border-image: linear-gradient(to right, #4caf50, #2196F3);
+    border-image-slice: 1;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #4caf50; 
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4caf50; 
+    border: none;
+    color: #fff; 
+    padding: 12px;
+    border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+    .containers {
+        width: 90%;
+    }
+} 
+
+/* Dropdown styles */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+}
+
+.dropbtn {
+    padding: 15px 40px;
+    font-size: 16px;
+    border: none;
+    background-color: #4c9eaf;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* User Profile Card */
+
+.body{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+}
+.profile-card {
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 90%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#contact-info, h2, p{
+    margin: 10px;
+    color: #6b6a6a;
+    font-size: 16px;
+}
+h2{
+    color: #1f1e1e;
+    font-size: 20px;
+}
+.web-email{
+    margin-top: 20px;
+}
+.show {
+    background-color: #5930d6;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.show:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Popup on button click styles */
+
+.popup-btn{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(235, 216, 192);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    max-width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.clickbtn, .close {
+    background-color: rgb(53, 168, 206);
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clickbtn:hover, .close:hover {
+    background-color: #8acb8d;
+}
+
+@media (max-width: 600px) {
+    .popup-content {
+        max-width: 100%;
+    }
+}
+
+
+/* Weather App */
+
+.weather{
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    align-items: center;
+}
+.weather-container {
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin: 0;
+    color: #333;
+}
+
+#temperature {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.weather-btn {
+    background-color: rgb(211, 182, 145);
+    color: #fff;
+    padding: 13px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.weather-btn:hover {
+    background-color: #fff;
+    border: 3px solid rgb(211, 182, 145);
+    color: rgb(211, 182, 145);
+    padding: 11px 20px;
+}
+
+
+/* Slider  */
+
+.slider-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.juice, .fish{
+    height: 100vh;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+/* Sidebar  */
+
+.menu-container {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu-container a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-container a:hover {
+    color: #f1f1f1;
+}
+
+.menu-container .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.page-content {
+    transition: margin-left .5s;
+    padding: 16px;
+}

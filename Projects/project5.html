@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Card</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="body">
+    <!-- User Profile Card -->
+    <div class="profile-card">
+        <img class="profile-img" src="/Images/myimage.jpg" alt="Profile Picture">
+        <h2>Rachel Mutoni</h2>
+        <div class="web-email">
+        <p>Web Developer / Front-end Developer</p>
+        <p>Email: mutonirachel20@gmail.com</p>
+    </div>
+        <button onclick="showContactInfo()" class="show">Show Contact Info</button>
+        <div id="contact-info" style="display: none;">
+            <p>Phone: 0790 334-688</p>
+            <p>Address: 137 St, Kicukiro - Kigali -Rwanda</p>
+        </div>
+    </div>
+
+    <script>
+        function showContactInfo() {
+            var contactInfo = document.getElementById("contact-info");
+            contactInfo.style.display = (contactInfo.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

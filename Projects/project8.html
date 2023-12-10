@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="weather">
+
+    <!-- Weather App  -->
+
+    <div class="weather-container">
+        <h2>Weather App</h2>
+        <p id="location">City, Country</p>
+        <p id="temperature">Temperature: 25°C</p>
+        <button onclick="getWeather()" class="weather-btn">Weather</button>
+    </div>
+
+    <script>
+        function getWeather() {
+            
+            var locationElement = document.getElementById("location");
+            var temperatureElement = document.getElementById("temperature");
+
+            var city = "New York";
+            var country = "US";
+            var temperature = getRandomTemperature();
+
+            locationElement.textContent = city + ", " + country;
+            temperatureElement.textContent = "Temperature: " + temperature + "°C";
+        }
+
+        function getRandomTemperature() {
+            return Math.floor(Math.random() * (35 - (-10) + 1)) + (-10);
+        }
+    </script>
+</body>
+</html>
